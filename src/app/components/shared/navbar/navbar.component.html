@@ -8,29 +8,8 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="home" routerLinkActive='active'>Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="languages" routerLinkActive="active">Languages</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="skills" routerLinkActive="active">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="tools" routerLinkActive="active">Tools</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="work-experience" routerLinkActive="active">Work Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="tools" routerLinkActive="active">Tools</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="extra-studies" routerLinkActive="active">Extra Studies</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="references" routerLinkActive="active">References</a>
+            <li *ngFor="let option of options" class="nav-item">
+                <a class="nav-link" [routerLink]="option.url" routerLinkActive='active'>{{option.name}}</a>
             </li>
         </ul>
     </div>

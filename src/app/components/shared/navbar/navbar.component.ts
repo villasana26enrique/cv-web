@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuInfoService } from '../../../services/menu-info.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  options: any;
+  constructor(service: MenuInfoService) { 
+    this.options = service.getOptions('en');
+  }
 
   ngOnInit(): void {
   }
-
 }
